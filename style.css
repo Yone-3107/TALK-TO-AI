@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --black:#130f40;
+    --white:#fff;
+    --gradient:linear-gradient(rgb(29, 47, 54), rgb(22, 47, 185));
+    --background:rgba(255,255,255,.1);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --border:.1rem solid rgba(255,255,255,.1);
+    --border-top:.1rem solid rgba(255,255,255,.3);
+    --border-left:.1rem solid rgba(255,255,255,.3);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+}
+
+html::-webkit-scrollbar{
+    width:1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:var(--gradient);
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--white);
+    border-radius: 5rem;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    padding-bottom: 2.5rem;
+}
+
+.heading span{
+    background:var(--background);
+    border-radius: .5rem;
+    border:var(--border);
+    border-top:var(--border-top);
+    border-left:var(--border-left);
+    font-size: 4rem;
+    color:var(--white);
+    padding:.5rem 1.5rem;
+    text-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    box-shadow: var(--box-shadow);
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    transition: .2s linear;
+    background:var(--white);
+    color:var(--black);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .1rem;
+}
+
+.gradient-background{
+    height: 100%;
+    width: 100%;
+    background: var(--gradient);
+    position: fixed;
+    top:0; left: 0;
+    z-index: -1;
+    overflow:hidden;
+}
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(https://www.intouchcx.com/wp-content/uploads/2023/04/Best-of-the-Best-Award-Winners-nomination-Instagram-Post-Presentation-169-2.jpg); /* Đường dẫn đến ảnh */
+    background-size: cover; /* Phủ đầy */
+    opacity: 0.5; /* Độ mờ */
+    z-index: -1; /* Đặt dưới các phần tử khác */
+}
+
+.header{
+    position: fixed;
+    top:1.5rem; left:50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 95%;
+    background: var(--background);
+    border:var(--border);
+    border-top:var(--border-top);
+    border-left:var(--border-left);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+    border-radius: .5rem;
+    backdrop-filter: blur(.4rem);
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:var(--white);
+    text-transform: uppercase;
+}
+
+.header .logo i{
+    color:var(--black);
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    color:var(--white);
+}
+
+.header .navbar a:hover{
+    color:var(--black);
+}
+
+#menu-btn{
+    font-size: 3rem;
+    cursor: pointer;
+    color:var(--white);
+    display: none;
+}
+
+.home{
+    height: 100vh;
+    padding:7rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .content{
+    width: 75rem;
+    text-align: center;
+}
+
+.home .content h3{
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 4rem;
+    line-height: 1.8;
+    text-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.home .content p{
+    font-weight: 300;
+    color: var(--white);
+    font-size: 2rem;
+    line-height: 1.8;
+    padding:1rem 0;
+}
+
+.page {
+    position: relative; /* Để có thể đặt lớp phủ */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1; /* Đảm bảo nội dung nằm trên ảnh nền */
+}
+
+.page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://kernel-technology.com/wp-content/uploads/2024/01/What-is-Artiificial-IntelligenceAI-1.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4; /* Chỉ làm mờ ảnh nền */
+    z-index: -1; /* Đặt ảnh nền phía sau nội dung */
+}
+
+.page .content2 {
+    position: relative; /* Giữ nội dung nằm trên lớp phủ */
+    z-index: 2; /* Đảm bảo nội dung nằm trên ảnh nền và lớp phủ */
+    color: white; /* Đảm bảo chữ màu trắng */
+}
+
+
+.page .content2 h3{
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 4rem;
+    line-height: 1.8;
+    text-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.page .content2 p{
+    font-weight: 300;
+    color: var(--white);
+    font-size: 2rem;
+    line-height: 1.8;
+    padding:1rem 0;
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: initial;
+        transition: .2s linear;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:115%; left:0; right:0;
+        background:var(--gradient);
+        border-radius: .5rem;
+        transition: .3s linear;
+        box-shadow: var(--box-shadow);
+        padding:.5rem 1.5rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        display: block;
+        background:var(--background);
+        border-radius: .5rem;
+        margin:1.2rem 0;
+        padding:1.5rem;
+        border:var(--border);
+        border-top:var(--border-top);
+        border-left:var(--border-left);
+        box-shadow: var(--box-shadow);
+    }
+
+    .home .content h3{
+        font-size: 3.5rem;
+    }
+
+    .home .content p{
+        font-size: 1.6rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .heading span{
+        font-size: 3rem;
+    }
+
+}
+.chat-container {
+    position: fixed;
+    bottom: 5%;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for width */
+    width: 1000px; /* Increased width */
+    height: 500px; /* Set height */
+    border: 1px solid var(--border);
+    border-radius: 5%;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    display: none; /* Initially hidden */
+    flex-direction: column;
+}
+
+.chat-header {
+    background: var(--gradient);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+    border-radius: .5rem .5rem 0 0;
+    font-size: 2rem; /* Increased font size for the header */
+}
+
+.chat-messages {
+    padding: 1rem;
+    flex: 1; /* Allow this area to expand */
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-top: none;
+}
+
+.chat-messages div {
+    font-size: 1.5rem; /* Increased font size for chat messages */
+}
+
+.chat-input {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.chat-input input {
+    flex: 1;
+    border: none;
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: 1.5rem; /* Increased font size for input */
+}
+
+.chat-input button {
+    background: var(--gradient);
+    color: var(--white);
+    border: none;
+    padding: .5rem 1rem;
+    margin-left: .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1.5rem; /* Increased font size for button */
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px; /* Kích thước logo */
+    height: auto;
+    margin-right: 10px; /* Khoảng cách giữa hình ảnh và văn bản */
+}
+
+.logo-text {
+    font-size: 2.5rem; /* Kích thước chữ */
+    color: var(--white);
+    font-weight: bold;
+}
+.background2-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(https://d3g5ywftkpzr0e.cloudfront.net/wp-content/uploads/2023/07/13220529/Artificial-Intelligence-in-Indonesia-The-current-state-and-its-opportunities.jpeg); /* Đường dẫn đến ảnh */
+    background-size: cover; /* Phủ đầy */
+    opacity: 0.5; /* Độ mờ */
+    z-index: -1; /* Đặt dưới các phần tử khác */
+}

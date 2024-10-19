@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ở đây có AI trò chuyện</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Chat box styles */
+
+    </style>
+</head>
+<body>
+    <div class="gradient-background"></div> 
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="logo1.png" alt="Logo" class="logo-img">
+            <span class="logo-text">PSYCHOBOT</span>
+        </a>
+        <nav class="navbar">
+            <a href="index.html">Trang Chủ</a>
+            <a href="trang1.html">Bắt Đầu Trò Chuyện</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    <div class="background2-image"></div>
+
+<!-- Chat box -->
+<div class="chat-container" id="chat-container">
+    <div class="chat-header">Trò Chuyện với AIBOT</div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Nhập tin nhắn..." />
+        <button id="send-btn">Gửi</button>
+    </div>
+</div>
+
+<script>
+    // JavaScript for chat functionality
+    const chatContainer = document.getElementById('chat-container');
+    const chatMessages = document.getElementById('chat-messages');
+    const userInput = document.getElementById('user-input');
+    const sendBtn = document.getElementById('send-btn');
+
+    // Toggle chat visibility
+    chatContainer.style.display = 'flex';
+
+    sendBtn.addEventListener('click', function() {
+        const message = userInput.value.trim();
+        if (message) {
+            // Append user message
+            const userMessage = document.createElement('div');
+            userMessage.textContent = `Bạn: ${message}`;
+            chatMessages.appendChild(userMessage);
+
+            // Simulate AI response (replace with actual logic)
+            const aiResponse = document.createElement('div');
+            aiResponse.textContent = `AI: ${message.split('').reverse().join('')}`; // Example response
+            chatMessages.appendChild(aiResponse);
+
+            // Clear input
+            userInput.value = '';
+
+            // Scroll to the bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    });
+
+    userInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            sendBtn.click();
+        }
+    });
+</script>
+
+</body>
+</html>
