@@ -296,7 +296,7 @@ section{
     .heading span{
         font-size: 3rem;
     }
-@media (max-width:1400px){
+
 .chat-container {
     position: fixed;
     bottom: 5%;
@@ -310,7 +310,7 @@ section{
     box-shadow: var(--box-shadow);
     display: none; /* Initially hidden */
     flex-direction: column;
-}
+
 }
 .chat-header {
     background: var(--gradient);
