@@ -303,8 +303,8 @@ section{
     bottom: 5%;
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for width */
-    width: 1000px; /* Increased width */
-    height: 500px; /* Set height */
+    width: 70%; /* Increased width */
+    height: 75%; /* Set height */
     border: 1px solid var(--border);
     border-radius: 5%;
     background: var(--white);
