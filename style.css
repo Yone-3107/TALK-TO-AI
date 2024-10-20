@@ -296,7 +296,7 @@ section{
     .heading span{
         font-size: 3rem;
     }
-@media (max-width:500px){
+@media (max-width:1400px){
 .chat-container {
     position: fixed;
     bottom: 5%;
@@ -311,7 +311,7 @@ section{
     display: none; /* Initially hidden */
     flex-direction: column;
 }
-
+}
 .chat-header {
     background: var(--gradient);
     color: var(--white);
@@ -356,7 +356,6 @@ section{
     border-radius: .5rem;
     cursor: pointer;
     font-size: 1.5rem; /* Increased font size for button */
-}
 }
 .logo {
     display: flex;
