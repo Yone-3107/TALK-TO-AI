@@ -3,7 +3,7 @@
 :root{
     --black:#130f40;
     --white:#fff;
-    --gradient:linear-gradient(rgb(29, 47, 54), rgb(22, 47, 185));
+    --gradient:linear-gradient(blue, rgb(66, 119, 155), rgb(22, 47, 185));
     --background:rgba(255,255,255,.1);
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
     --border:.1rem solid rgba(255,255,255,.1);
